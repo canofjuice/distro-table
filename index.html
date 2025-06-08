@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Naomi's Distro Table</title>
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+    body {background-color: #1c2833 ; color: #f2f3f4; font-family: "Roboto Mono", monospace;}
+    footer {font-style: italic; position: fixed; left: 2rem; bottom: 2rem;}
+    h1, h3, footer {text-align: center;}
+    a {text-decoration:none}
+    a:hover {filter: brightness(150%);}
+    a img:hover {filter: brightness(75%);}
+    small {color: #bdc3c7; font-style: italic; font-size: 12px;}
+    .menu {position: fixed; right: 50px; width: 12rem; background-color: #212f3c; border: dashed #5d6d7e 2px; padding: 0.5rem;}
+    .menu hr {color: #5d6d7e; border: dashed; border-width: 1px;}
+    .info {background-color: #17202a; width: 50%; height: 100px; margin: 15px;}
+    .info thead tr th {font-size: 20px; padding: 15px; border: dashed #5d6d7e 2px;}
+    .info tbody {text-align: center; font-size: 24px;}
+    .info tbody tr td, th {border: dashed #5d6d7e 2px; padding: 15px;}
+    .logo {padding: 15px;}
+    .about {font-size: 24px; font-weight: bold; color: #f2f3f4; background-color: #212f3c; border: dashed #5d6d7e 2px; padding: 0.2rem; padding-left: 6px; border-radius: 5px;}
+    .aboutscreen {display: none; width: 100%; height: 100%; position: fixed; top: 0px; left: 0px; z-index: 2; background-color: rgb(0 0 0 / 0.5); }
+    .window {position: fixed; top: 50%; left: 50%; width: 800px; height: 400px; margin-top: -200px; margin-left: -400px; background-color: #212f3c; border: dashed #5d6d7e 2px; border-radius: 15px; z-index: 1;}
+    .window hr {width: 98%; color: #5d6d7e; border: dashed; border-width: 1px;}
+    </style>
+  </head>
+  <body>
+    <h1><b><i>Naomi's Distro Table</i></b></h1>
+    <h3><i>For those who want to know exactly how much system resources a Linux™ distro uses.</i></h3><br>
+    <div class=aboutscreen id=aboutscreen>
+        <div class=window>
+            <span style="position: relative; left: 25px; top: 5px; font-size: 24px; font-style: italic; font-weight: bold;">About</span>
+            <a href=# id=closeabout style="position: absolute; right: 30px; top: 5px; font-size: 24px; font-weight: bold; color: #ec7063;">X</a>
+            <hr>
+            <ul style="font-size: 14px;">
+                <li>All distros tested in <b>VirtualBox</b>, with <b>4GB RAM</b>, <b>2 CPUs</b> and <b>40GB HDD (actual size 43GB)</b>.</li><br>
+                <li>All systems updated once installed.</li><br>
+                <li>Idle for 5-10 minutes.</li><br>
+                <li>CPU usage does not count system monitor/task manager usage.</li><br>
+                <li>No additional software installed. System resources measured using pre-installed software only.</li><br>
+                <li style="color: #cd6155;">Data may vary from machine to machine.</li><br><br>
+            </ul>
+            <span style="font-size: 22px; position: relative; top: 5%;"><center>Site written entirely in <b><i>one HTML document</b></i>. :3c</center></span>
+        </div>
+    </div>
+    <div class=menu>
+      <span style="margin-top: 10px; font-size: 22px; font-style: italic;">Select Distro:</span>
+      <hr>
+      <div style="height: 16rem; overflow: auto; font-size: 22px;">
+      <!-- Distro menu-->
+        <a href="#Linux_Mint" style="color: #92B662;">Linux Mint</a><br>
+        <a href="#Ubuntu" style="color: #E95420;">Ubuntu</a><br>
+        <a href="#Zorin_OS" style="color: #15A6F0;">Zorin OS</a><br>
+        <a href="#Fedora" style="color: #51A2DA;">Fedora</a><br>
+        <a href="#Debian" style="color: #CE0058;">Debian</a><br>
+        <a href="#Arch_Linux" style="color: #1793D1;">Arch</a><br>
+        <a href="#Tumbleweed" style="color: #73BA25;">openSUSE</a><br>
+        <a href="#Void_Linux" style="color: #478061;">Void Linux</a><br>
+      </div>
+    </div>
+    <div><center>
+      <img id="Linux_Mint" src="./logos/lm-logo.png" width=25%><br><br>
+      <small>NOTE: Multimedia codecs installed, no proprietary drivers. Package amount may vary.
+      <table class=info>
+        <thead>
+          <tr>
+            <th scope="col" width=20%>Edition</th>
+            <th scope="col" width=20%>CPU usage</th>
+            <th scope="col" width=20%>RAM usage</th>
+            <th scope="col" width=20%>Storage</th>
+            <th scope="col" width=20%>Packages</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+           <th scope="row"><i>Cinnamon</i></th>
+            <td>~2%</td>
+            <td>1GB<br><span style="font-size: 12px; position: absolute; margin-left: -55px; margin-top: -3px;">~750mb `free -m`</span></td>
+            <td>14GB</td>
+            <td>2173</td>
+          </tr>
+          <tr>
+           <th scope="row"><i>XFCE</i></th>
+            <td>1%</td>
+            <td>750MB</td>
+            <td>12GB</td>
+            <td>1906</td>
+          </tr>
+          <tr>
+           <th scope="row"><i>MATE</i></th>
+            <td>2%</td>
+            <td>850MB</td>
+            <td>13GB</td>
+            <td>1916</td>
+          </tr>
+           <th scope="row"><i>LMDE</i></th>
+            <td>~2%</td>
+            <td>1.2GB<br><span style="font-size: 12px; position: absolute; margin-left: -55px; margin-top: -3px;">1071mb `free -m`</span></td>
+            <td>8GB</td>
+            <td>2105</td>
+          </tr>
+      </table>
+      <img src="./logos/ubuntu.png" width=25% class=logo id=Ubuntu><br><br>
+      <small>NOTE: Ubuntu LTS is used.</small>
+      <table class=info>
+        <thead>
+          <tr>
+            <th scope="col" width=20%>Flavor</th>
+            <th scope="col" width=20%>CPU usage</th>
+            <th scope="col" width=20%>RAM usage</th>
+            <th scope="col" width=20%>Storage</th>
+            <th scope="col" width=20%>Packages</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+           <th scope="row"><i>Stock</i></th>
+            <td>1-2%</td>
+            <td>1GB<span style="font-size: 12px; position: absolute; margin-left: -75px; margin-top: 30px;">1061mb `free -m`</span></td>
+            <td>9.4GB</td>
+            <td>1576</td>
+          </tr>
+          <tr>
+           <th scope="row"><i>Kubuntu</i></th>
+            <td>TBD</td>
+            <td>TBD</td>
+            <td>TBD</td>
+            <td>TBD</td>
+          </tr>
+          <tr>
+           <th scope="row"><i>Xubuntu</i></th>
+            <td>TBD</td>
+            <td>TBD</td>
+            <td>TBD</td>
+            <td>TBD</td>
+          </tr>
+          <tr>
+           <th scope="row"><i>Lubuntu</i></th>
+            <td>TBD</td>
+            <td>TBD</td>
+            <td>TBD</td>
+            <td>TBD</td>
+          </tr>
+          <tr>
+           <th scope="row"><i>MATE</i></th>
+            <td>TBD</td>
+            <td>TBD</td>
+            <td>TBD</td>
+            <td>TBD</td>
+          </tr>
+          <tr>
+           <th scope="row"><i>Budgie</i></th>
+            <td>TBD</td>
+            <td>TBD</td>
+            <td>TBD</td>
+            <td>TBD</td>
+          </tr>
+      </table>
+      <img src="./logos/zorin.png" width=30% class=logo id=Zorin_OS><br>
+      <table class=info>
+        <thead>
+          <tr>
+            <th scope="col" width=20%>Edition</th>
+            <th scope="col" width=20%>CPU usage</th>
+            <th scope="col" width=20%>RAM usage</th>
+            <th scope="col" width=20%>Storage</th>
+            <th scope="col" width=20%>Packages</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+           <th scope="row"><i>Core</i></th>
+            <td>TBD</td>
+            <td>TBD</td>
+            <td>TBD</td>
+            <td>TBD</td>
+          </tr>
+      </table>
+      <img src="./logos/debian.png" width=25% class=logo id=Debian><br>
+      <table class=info>
+        <thead>
+          <tr>
+            <th scope="col" width=20%>Desktop</th>
+            <th scope="col" width=20%>CPU usage</th>
+            <th scope="col" width=20%>RAM usage</th>
+            <th scope="col" width=20%>Storage</th>
+            <th scope="col" width=20%>Packages</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+           <th scope="row"><i>GNOME</i></th>
+            <td>TBD</td>
+            <td>TBD</td>
+            <td>TBD</td>
+            <td>TBD</td>
+          </tr>
+          <tr>
+           <th scope="row"><i>KDE</i></th>
+            <td>TBD</td>
+            <td>TBD</td>
+            <td>TBD</td>
+            <td>TBD</td>
+          </tr>
+          <tr>
+           <th scope="row"><i>XFCE</i></th>
+            <td>TBD</td>
+            <td>TBD</td>
+            <td>TBD</td>
+            <td>TBD</td>
+          </tr>
+          <tr>
+           <th scope="row"><i>LXQt</i></th>
+            <td>TBD</td>
+            <td>TBD</td>
+            <td>TBD</td>
+            <td>TBD</td>
+          </tr>
+          <tr>
+           <th scope="row"><i>MATE</i></th>
+            <td>TBD</td>
+            <td>TBD</td>
+            <td>TBD</td>
+            <td>TBD</td>
+          </tr>
+          <tr>
+           <th scope="row"><i>TTY</i></th>
+            <td>TBD</td>
+            <td>TBD</td>
+            <td>TBD</td>
+            <td>TBD</td>
+          </tr>
+      </table>
+      <img src="./logos/fedora.png" width=25% class=logo id=Fedora><br>
+      <table class=info>
+        <thead>
+          <tr>
+            <th scope="col" width=20%>Spin</th>
+            <th scope="col" width=20%>CPU usage</th>
+            <th scope="col" width=20%>RAM usage</th>
+            <th scope="col" width=20%>Storage</th>
+            <th scope="col" width=20%>Packages</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+           <th scope="row"><i>GNOME</i></th>
+            <td>TBD</td>
+            <td>TBD</td>
+            <td>TBD</td>
+            <td>TBD</td>
+          </tr>
+          <tr>
+           <th scope="row"><i>KDE</i></th>
+            <td>TBD</td>
+            <td>TBD</td>
+            <td>TBD</td>
+            <td>TBD</td>
+          </tr>
+          <tr>
+           <th scope="row"><i>XFCE</i></th>
+            <td>TBD</td>
+            <td>TBD</td>
+            <td>TBD</td>
+            <td>TBD</td>
+          </tr>
+          <tr>
+           <th scope="row"><i>Cinnamon</i></th>
+            <td>TBD</td>
+            <td>TBD</td>
+            <td>TBD</td>
+            <td>TBD</td>
+          </tr>
+          <tr>
+           <th scope="row"><i>Cosmic</i></th>
+            <td>TBD</td>
+            <td>TBD</td>
+            <td>TBD</td>
+            <td>TBD</td>
+          </tr>
+      </table>
+      <img src="./logos/arch.png" width=25% class=logo id=Arch_Linux><br>
+      <small>NOTE: All desktop environments installed via `archinstall` script.</small>
+      <table class=info>
+        <thead>
+          <tr>
+            <th scope="col" width=20%>Desktop</th>
+            <th scope="col" width=20%>CPU usage</th>
+            <th scope="col" width=20%>RAM usage</th>
+            <th scope="col" width=20%>Storage</th>
+            <th scope="col" width=20%>Packages</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+           <th scope="row"><i>GNOME</i></th>
+            <td>TBD</td>
+            <td>TBD</td>
+            <td>TBD</td>
+            <td>TBD</td>
+          </tr>
+          <tr>
+           <th scope="row"><i>KDE</i></th>
+            <td>TBD</td>
+            <td>TBD</td>
+            <td>TBD</td>
+            <td>TBD</td>
+          </tr>
+          <tr>
+           <th scope="row"><i>XFCE</i></th>
+            <td>TBD</td>
+            <td>TBD</td>
+            <td>TBD</td>
+            <td>TBD</td>
+          </tr>
+      </table>
+      <img src="./logos/tumble.png" width=25% class=logo id=Tumbleweed><br>
+      <table class=info>
+        <thead>
+          <tr>
+            <th scope="col" width=20%>Desktop</th>
+            <th scope="col" width=20%>CPU usage</th>
+            <th scope="col" width=20%>RAM usage</th>
+            <th scope="col" width=20%>Storage</th>
+            <th scope="col" width=20%>Packages</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+           <th scope="row"><i>Cinnamon</i></th>
+            <td>TBD</td>
+            <td>TBD</td>
+            <td>TBD</td>
+            <td>TBD</td>
+          </tr>
+          <tr>
+           <th scope="row"><i>XFCE</i></th>
+            <td>TBD</td>
+            <td>TBD</td>
+            <td>TBD</td>
+            <td>TBD</td>
+          </tr>
+          <tr>
+           <th scope="row"><i>MATE</i></th>
+            <td>TBD</td>
+            <td>TBD</td>
+            <td>TBD</td>
+            <td>TBD</td>
+          </tr>
+      </table>
+      <img src="./logos/void.png" width=10% class=logo id=Void_Linux><br>
+      <table class=info>
+        <thead>
+          <tr>
+            <th scope="col" width=20%>Desktop</th>
+            <th scope="col" width=20%>CPU usage</th>
+            <th scope="col" width=20%>RAM usage</th>
+            <th scope="col" width=20%>Storage</th>
+            <th scope="col" width=20%>Packages</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+           <th scope="row"><i>TTY</i></th>
+            <td>TBD</td>
+            <td>TBD</td>
+            <td>TBD</td>
+            <td>TBD</td>
+          </tr>
+          <tr>
+           <th scope="row"><i>XFCE</i></th>
+            <td>TBD</td>
+            <td>TBD</td>
+            <td>TBD</td>
+            <td>TBD</td>
+          </tr>
+      </table>
+    </center>
+    </div>
+    <footer><a class=about id=about href=#>About<span style="font-weight: normal;">¿</span></a><br><br>
+    <a href="https://compactbunker.org" target=_blank><img src="https://compactbunker.org/blinkies/personal.gif"></a><br>
+    🄯 Compact Bunker<br>No rights reserved.<br>:3c</footer>
+    <script>
+        const aboutscreen = document.getElementById('aboutscreen');
+        const about = document.getElementById('about');
+        const closeabout = document.getElementById('closeabout');
+
+        about.addEventListener('click', function(event) {
+            event.preventDefault();
+            aboutscreen.style.display = 'block';
+        });
+
+        closeabout.addEventListener('click', function(event) {
+            event.preventDefault();
+            aboutscreen.style.display = 'none';
+        });
+    </script>
+  </body>
+</html>
